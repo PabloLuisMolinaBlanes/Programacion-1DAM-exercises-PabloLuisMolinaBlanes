@@ -1,4 +1,4 @@
-public class Ejercicio2 {
+public class Ejercicio02 {
 	static double euros; 
 	static int factorDeConversion = 166; // The value of a Spanish Peseta in the 1970s compared to current euros, can be replaced for other values in different times(in the 1930s the value of a Spanish Peseta was equivalent to that of a current euro, for reference) 
 	public static void main(String[] args) {

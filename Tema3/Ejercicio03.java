@@ -1,4 +1,4 @@
-public class Ejercicio3 {
+public class Ejercicio03 {
 	static double factorDeConversion = 166;
 	static int pesetas; // One 1970 Spanish Peseta had the adquisitive power of the opposite of 1/166 a current euro, replace '166' for the worthof the peseta for one euro of another age.
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-public class Ejercicio7 {
+public class Ejercicio07 {
 	static int numeroDeProductos;
 	static double precioDeProductos;
   static double currentIVA = 0.21; // (Current percentage of IVA)/100	
