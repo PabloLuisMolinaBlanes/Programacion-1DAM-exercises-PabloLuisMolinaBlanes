@@ -16,7 +16,7 @@ public class Exercise10 {
     monthAndItsHoroscopeChangingDay.put(12,22);
     HashMap<Integer, Integer> lastDayOfTheMonth = new HashMap<Integer, Integer>();
     lastDayOfTheMonth.put(1,31);
-    lastDayOfTheMonth.put(2,28);
+    lastDayOfTheMonth.put(2,29);
     lastDayOfTheMonth.put(3,31);
     lastDayOfTheMonth.put(4,30);
     lastDayOfTheMonth.put(5,31);
@@ -42,6 +42,7 @@ public class Exercise10 {
     signPerMonth.put(12,"Sagittarius");
     signPerMonth.put(13,"Capricorn");
     System.out.println("This program is thought to show your horscope symbol as dictated by the Tropical Zodiac");
+    try {
     System.out.println("Please, input the month you were bornt in");
     int monthShown = Integer.parseInt(System.console().readLine());
     System.out.println("Now, input the day you were bornt in");
@@ -61,7 +62,11 @@ public class Exercise10 {
           System.out.println("Your symbol is " + signPerMonth.get(monthShown + 1)); 
         }
       }
-    }
+    } catch (NullPointerException ex) {
+      System.out.println("That month does not exist in our records. Try again next execution.");
   }
+}
+}
+
       
 
