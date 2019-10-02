@@ -13,7 +13,7 @@ public class Exercise05 {
 		}
 		} catch (ArithmeticException ex) {
 		System.out.println("There is no solution for x");
-		}
+
 	        
 	}
 }	
