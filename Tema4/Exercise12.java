@@ -61,7 +61,7 @@ public class Exercise12 {
   if (respuesta5.equals("public static void main(String[] args)")) {
    System.out.println("¿Es 'args' en 'String[] args' obligatorio como nombre de la String[]?");
    respuesta5 = keyboard.nextLine();
-   if (respuesta5.equalsIgnoreCase("Sí") || respuesta5.equalsIgnoreCase("Si")) {
+   if (respuesta5.equalsIgnoreCase("No"))) {
     Audio.main("respuestacorrecta.wav");
     System.out.println("Tu respuesta es correcta");
     points++;
