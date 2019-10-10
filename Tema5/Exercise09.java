@@ -4,16 +4,10 @@ public class Exercise09 {
     System.out.println("Please, input your number");
     double inputtedNumber = Double.parseDouble(System.console().readLine());
     int numberOfDigits = 1;
-    while (true) {
-    if ((inputtedNumber * 10) % 10 == 0) {
-    break;   
-    }
+    while ((inputtedNumber * 10) % 10 != 0) {
     inputtedNumber = inputtedNumber * 10;
   }
-    while (true) {
-    if (inputtedNumber - 10 < 0) {
-      break;
-    }
+    while (inputtedNumber - 10 > 0) {
     inputtedNumber = inputtedNumber / 10;
     numberOfDigits++;
     }
