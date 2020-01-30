@@ -2,6 +2,8 @@ package Tema9;
 import java.util.Scanner;
 public class init {
 	public static void main(String[] args) {
+		Gato gato = new Gato(0.75, 30, "blanco", "garfield");
+		System.out.println(gato);
 	do {
     System.out.println("Horse menu");
     System.out.println("----------");
@@ -43,5 +45,4 @@ public class init {
     }
 	} while (true);
 	}
-
 }

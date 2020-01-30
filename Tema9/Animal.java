@@ -27,4 +27,41 @@ public void stare() {
 		this.emotion = "BAD";
 	}
 }
+public double getHeight() {
+	return height;
+}
+public void setHeight(double height) {
+	this.height = height;
+}
+public double getWeight() {
+	return weight;
+}
+public void setWeight(double weight) {
+	this.weight = weight;
+}
+public String getEmotion() {
+	return emotion;
+}
+public void setEmotion(String emotion) {
+	this.emotion = emotion;
+}
+public String getColour() {
+	return colour;
+}
+public void setColour(String colour) {
+	this.colour = colour;
+}
+public String getSound() {
+	return sound;
+}
+public void setSound(String sound) {
+	this.sound = sound;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+
 }
