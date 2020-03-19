@@ -76,7 +76,6 @@ public class ExCRISPR {
 					BufferedReader readin = new BufferedReader(new FileReader(locationCRIS));
 					BufferedWriter writinRes = new BufferedWriter(new FileWriter("resultTest.txt"));
 					String read = readin.readLine();
-					BufferedReader stepByStep = new BufferedReader(new StringReader(read));
 					char[] readToArray = read.toCharArray();
 					String curr = "";
 					System.out.println("Where is your CRISPR strand?");
@@ -103,9 +102,6 @@ public class ExCRISPR {
 							}
 							if (counterCRI >= CRISPRToChar.length - 1 && currChar == currStrand) {
 								positions.add(position);
-							}
-							if (currChar != currStrand) {
-								counter++;	
 							}
 							counterCRI = 0;
 							currChar = CRISPRToChar[counterCRI];
