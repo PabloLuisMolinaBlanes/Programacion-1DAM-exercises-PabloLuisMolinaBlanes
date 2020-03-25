@@ -19,20 +19,17 @@ public class ExCV {
 		String curr = "";
 		BufferedReader stepByStep = new BufferedReader(new StringReader(""));
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(file+"_sort"+".txt"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		System.out.println("<!DOCTYPE html>");
-		System.out.println("<html lang='es'>");
-		System.out.println("<head>");
-		System.out.println("<meta charset='UTF-8'>");
-		System.out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-		System.out.println("<title>Curriculum Vitae</title>");
-		System.out.println("<link rel='stylesheet' href='cv.css'>");
-		System.out.println("</head>");
-		System.out.println("<body>");
-		System.out.println("<div class='fondoprueba' id='firstBack'></div>");
+		BufferedWriter writer = new BufferedWriter(new FileWriter(file+"_sort"+".html"));
+		writer.write("<!DOCTYPE html>\n");
+		writer.write("<html lang='es'>\n");
+		writer.write("<head>\n");
+		writer.write("<meta charset='UTF-8'>\n");
+		writer.write("<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n");
+		writer.write("<title>Curriculum Vitae</title>\n");
+		writer.write("<link rel='stylesheet' href='cv.css'>\n");
+		writer.write("</head>\n");
+		writer.write("<body>\n");
+		writer.write("<div class='fondoprueba' id='firstBack'></div>\n");
 		curr = readerGayy.readLine();
 		while (curr != null) {
 			BufferedReader readerSecond = new BufferedReader(new StringReader(curr));
@@ -56,18 +53,18 @@ public class ExCV {
 					name += currentChar;
 				}
 				if (nombre) {
-					name += "</h1>";	
+					name += "</h1>\n";	
 					nombre = false;
 					} else {
-						name += "</h1></div>";	
+						name += "</h1></div>\n";	
 					}
-				if (name.toLowerCase().equals("<div><h1>experiencia</h1></div>") || name.toLowerCase().equals("<div><h1>educacion</h1></div>")) {
+				if (name.toLowerCase().equals("<div><h1>experiencia</h1></div>\n") || name.toLowerCase().equals("<div><h1>educacion</h1></div>\n")) {
 					experiencia = true;
 				}
-				if (name.toLowerCase().equals("<div><h1>imagen</h1></div>")) {
+				if (name.toLowerCase().equals("<div><h1>imagen</h1></div>\n")) {
 					imagen = true;
 				}
-				System.out.println(name);
+				writer.write(name);
 				curr = readerGayy.readLine();
 			} else {
 				String name = "";
@@ -106,13 +103,17 @@ public class ExCV {
 						curr = readerGayy.readLine();
 					}
 				}
-				System.out.println(name);
+				writer.write(name);
 				experiencia = false;
 				imagen = false;
 			}
 		}
-		System.out.println("</body>");
-		System.out.println("</html>");
+		writer.write("</body>");
+		writer.write("</html>");
+		writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	} 
 }
 
